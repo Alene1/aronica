@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARONICA | Step Into Your Style</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        /* HEADER */
+
+        header {
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eeeeee;
+            background: #ffffff;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #111111;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #777777;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: #f7f7f7;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #555555;
+            margin-bottom: 35px;
+        }
+
+        .shop-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #111111;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .shop-button:hover {
+            background: #444444;
+        }
+
+        /* COLLECTION */
+
+        .collection {
+            padding: 70px 7%;
+            text-align: center;
+        }
+
+        .collection h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            width: 280px;
+            padding: 45px 25px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .category h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .category p {
+            color: #666666;
+            line-height: 1.6;
+        }
+/* PRODUCTS */
+
+.products {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 300px;
+    padding-bottom: 25px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.product-card p {
+    margin: 10px 0 20px;
+    color: #666666;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order-button:hover {
+    background: #444444;
+}
+
+.order-button:hover {
+    background: #444444;
+}
+        /* ABOUT */
+
+        .about {
+            padding: 70px 7%;
+            text-align: center;
+            background: #f7f7f7;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #555555;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+            color: #555555;
+        }
+
+        .phone {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #111111;
+            color: #ffffff;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .category {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            ARONICA
+        </div>
+
+      <nav>
+    <a href="#home">Home</a>
+    <a href="#collection">Collection</a>
+    <a href="#products">Shoes</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Step Into Your Style</h1>
+
+            <p>
+                Discover stylish and quality shoes
+                for Men, Women & Children.
+            </p>
+
+            <a href="#products" class="shop-button">
+                SHOP NOW
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+
+    <section class="collection" id="collection">
+
+        <h2>Our Collection</h2>
+
+        <div class="categories">
+
+            <div class="category">
+
+                <h3>Men's Shoes</h3>
+
+                <p>
+                    Stylish and comfortable shoes
+                    designed for men.
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <h3>Women's Shoes</h3>
+
+                <p>
+                    Elegant and fashionable shoes
+                    for every occasion.
+                </p>
+
+            </div>
+
+
+            <div class="category">
+
+                <h3>Children's Shoes</h3>
+
+                <p>
+                    Comfortable and stylish shoes
+                    for your children.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+    <h2>Featured Shoes</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/1150177192336063611.jpeg"
+     alt="Men's Shoes">
+            </div>
+
+            <h3>Men's Shoes</h3>
+
+            <p>Modern and comfortable</p>
+<p><strong>ETB 1,500</strong></p>
+<p>Sizes: 39 - 44</p>
+<p>Available Now</p>
+            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20your%20Men's%20Shoes." class="order-button">
+📱 Order Now
+</a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/319755642316663217.jpeg"
+     alt="Women's Shoes">
+            </div>
+
+            <h3>Women's Shoes</h3>
+
+            <p>Elegant & stylish</p>
+<p><strong>ETB 1,800</strong></p>
+<p>Sizes: 36 - 41</p>
+<p>Available Now</p>
+            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20your%20Women's%20Shoes." class="order-button">
+    📱 Order Now
+</a>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/kids-shoes.jpeg"
+     alt="Children's Shoes">
+            </div>
+
+            <h3>Children's Shoes</h3>
+
+            <p>Comfortable & playful</p>
+<p><strong>ETB 1,200</strong></p>
+<p>Sizes: 28 - 35</p>
+<p>Available Now</p>
+            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20your%20Children's%20Shoes." class="order-button">
+    📱 Order Now
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <h2>About ARONICA</h2>
+
+        <p>
+            ARONICA is a shoe boutique offering
+            stylish and quality footwear for men,
+            women and children. Our goal is to help
+            every customer step out with confidence
+            and style.
+        </p>
+
+    </section>
+<!-- WHY CHOOSE ARONICA -->
+
+<section class="collection">
+
+    <h2>Why Choose ARONICA?</h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <h3>Quality Shoes</h3>
+            <p>We offer stylish and comfortable footwear.</p>
+        </div>
+
+        <div class="category">
+            <h3>Affordable Prices</h3>
+            <p>Good shoes at prices that fit your budget.</p>
+        </div>
+
+        <div class="category">
+            <h3>Customer Service</h3>
+            <p>We are ready to help you choose the right shoes.</p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>Visit or Contact ARONICA</h2>
+
+        <p>
+    For orders, shoe sizes and inquiries, contact ARONICA.
+</p>
+
+        <p class="phone">
+    📞 <a href="tel:0967263998">0967263998</a>
+</p>
+      <p>
+    📍 Holeta, Oromia, Ethiopia
+</p>
+      <p>
+    🕒 Monday – Saturday: 8:00 AM – 6:00 PM
+</p>
+
+<p>
+    Sunday: Closed
+</p>
+<a href="https://wa.me/251967263998" class="order-button">
+    📱 Chat on WhatsApp
+</a>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+    © 2026 ARONICA | Step Into Your Style
+</p>
+
+    </footer>
+
+</body>
+
+</html>
