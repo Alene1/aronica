@@ -252,7 +252,46 @@
                 font-size: 17px;
             }
         }
-    </style>
+ .menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    .header-content {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 5px;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        margin: 0;
+        border-top: 1px solid #333;
+    }
+}   </style>
 </head>
 
 <body>
@@ -670,6 +709,10 @@
     </p>
 
 </footer>
-
+<script>
+function toggleMenu() {
+    document.getElementById("mainMenu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
