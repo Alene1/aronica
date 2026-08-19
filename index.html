@@ -1,639 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ARONICA | Step Into Your Style</title>
+<title>ARONICA | Step Into Your Style</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #111111;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #111;
+}
 
-        /* HEADER */
-
-        header {
-            width: 100%;
-            padding: 22px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eeeeee;
-            background: #ffffff;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 4px;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #111111;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #777777;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 20px;
-            background: #f7f7f7;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #555555;
-            margin-bottom: 35px;
-        }
-
-        .shop-button {
-            display: inline-block;
-            padding: 15px 35px;
-            background: #111111;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 15px;
-        }
-
-        .shop-button:hover {
-            background: #444444;
-        }
-
-        /* COLLECTION */
-
-        .collection {
-            padding: 70px 7%;
-            text-align: center;
-        }
-
-        .collection h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-
-        .categories {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .category {
-            width: 280px;
-            padding: 45px 25px;
-            border: 1px solid #dddddd;
-            border-radius: 8px;
-            background: #ffffff;
-        }
-
-        .category h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .category p {
-            color: #666666;
-            line-height: 1.6;
-        }
-/* PRODUCTS */
-
-.products {
-    padding: 70px 7%;
+header {
+    background: white;
     text-align: center;
+    padding: 25px 15px;
+    border-bottom: 1px solid #ddd;
 }
 
-.products h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
+.logo {
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin-bottom: 25px;
 }
 
-.product-container {
+nav {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.product-card {
-    width: 300px;
-    padding-bottom: 25px;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #ffffff;
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 18px;
 }
 
-.product-image {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
+nav a:hover {
+    color: #777;
 }
 
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: white;
 }
 
-.product-card h3 {
-    margin-top: 20px;
-    font-size: 21px;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.product-card p {
-    margin: 10px 0 20px;
-    color: #666666;
+.hero p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
 }
 
-.order-button {
+.button {
     display: inline-block;
-    padding: 12px 25px;
-    background: #111111;
-    color: #ffffff;
+    background: #111;
+    color: white;
+    padding: 16px 35px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
 }
 
-.order-button:hover {
-    background: #444444;
-}
-
-.order-button:hover {
-    background: #444444;
-}
-        /* ABOUT */
-
-        .about {
-            padding: 70px 7%;
-            text-align: center;
-            background: #f7f7f7;
-        }
-
-        .about h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.8;
-            color: #555555;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            margin-bottom: 20px;
-            color: #555555;
-        }
-
-        .phone {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* FOOTER */
-
-        footer {
-            padding: 25px;
-            text-align: center;
-            background: #111111;
-            color: #ffffff;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 700px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            .category {
-                width: 100%;
-                max-width: 350px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- HEADER -->
-
-    <header>
-
-        <div class="logo">
-            ARONICA
-        </div>
-
-      <nav>
-    <a href="#home">Home</a>
-    <a href="#collection">Collection</a>
-    <a href="#products">Shoes</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-    </header>
-
-
-    <!-- HERO -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <h1>Step Into Your Style</h1>
-
-            <p>
-                Discover stylish and quality shoes
-                for Men, Women & Children.
-            </p>
-
-            <a href="#products" class="shop-button">
-                SHOP NOW
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- COLLECTION -->
-
-    <section class="collection" id="collection">
-
-        <h2>Our Collection</h2>
-
-        <div class="categories">
-
-            <div class="category">
-
-                <h3>Men's Shoes</h3>
-
-                <p>
-                    Stylish and comfortable shoes
-                    designed for men.
-                </p>
-
-            </div>
-
-
-            <div class="category">
-
-                <h3>Women's Shoes</h3>
-
-                <p>
-                    Elegant and fashionable shoes
-                    for every occasion.
-                </p>
-
-            </div>
-
-
-            <div class="category">
-
-                <h3>Children's Shoes</h3>
-
-                <p>
-                    Comfortable and stylish shoes
-                    for your children.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-<!-- PRODUCTS -->
-
-<section class="products" id="products">
-
-    <h2>Featured Shoes</h2>
-
-    <div class="product-container">
-
-        <div class="product-card">
-
-            <div class="product-image">
-                <img src="images/1150177192336063611.jpeg"
-     alt="Men's Shoes">
-            </div>
-
-            <h3>Men's Shoes</h3>
-
-            <p>Modern and comfortable</p>
-<p><strong>ETB 1,500</strong></p>
-<p>Sizes: 39 - 44</p>
-<p>Available Now</p>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20your%20Men's%20Shoes." class="order-button">
-📱 Order Now
-</a>
-
-        </div>
-
-
-        <div class="product-card">
-
-            <div class="product-image">
-                <img src="images/319755642316663217.jpeg"
-     alt="Women's Shoes">
-            </div>
-
-            <h3>Women's Shoes</h3>
-
-            <p>Elegant & stylish</p>
-<p><strong>ETB 1,800</strong></p>
-<p>Sizes: 36 - 41</p>
-<p>Available Now</p>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20your%20Women's%20Shoes." class="order-button">
-    📱 Order Now
-</a>
-
-        </div>
-
-
-        <div class="product-card">
-
-            <div class="product-image">
-                <img src="kids-shoes.jpeg"
-     alt="Children's Shoes">
-     
-            </div>
-
-            <h3>Children's Shoes</h3>
-
-            <p>Comfortable & playful</p>
-<p><strong>ETB 1,200</strong></p>
-<p>Sizes: 28 - 35</p>
-<p>Available Now</p>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20your%20Children's%20Shoes." class="order-button">
-    📱 Order Now
-</a>
-
-        </div>
-
-    </div>
-
-</section>
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <h2>About ARONICA</h2>
-
-        <p>
-            ARONICA is a shoe boutique offering
-            stylish and quality footwear for men,
-            women and children. Our goal is to help
-            every customer step out with confidence
-            and style.
-        </p>
-
-    </section>
-<!-- WHY CHOOSE ARONICA -->
-
-<section class="collection">
-
-    <h2>Why Choose ARONICA?</h2>
-
-    <div class="categories">
-
-        <div class="category">
-            <h3>Quality Shoes</h3>
-            <p>We offer stylish and comfortable footwear.</p>
-        </div>
-
-        <div class="category">
-            <h3>Affordable Prices</h3>
-            <p>Good shoes at prices that fit your budget.</p>
-        </div>
-
-        <div class="category">
-            <h3>Customer Service</h3>
-            <p>We are ready to help you choose the right shoes.</p>
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-
-        <h2>Visit or Contact ARONICA</h2>
-
-        <p>
-    For orders, shoe sizes and inquiries, contact ARONICA.
-</p>
-
-        <p class="phone">
-    📞 <a href="tel:0967263998">0967263998</a>
-</p>
-      <p>
-    📍 Holeta, Oromia, Ethiopia
-</p>
-      <p>
-    🕒 Monday – Saturday: 8:00 AM – 6:00 PM
-</p>
-
-<p>
-    Sunday: Closed
-</p>
-<a href="https://wa.me/251967263998" class="order-button">
-    📱 Chat on WhatsApp
-</a>
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-    © 2026 ARONICA | Step Into Your Style
-</p>
-
-    </footer>
-<!-- ARONICA PRODUCTS -->
-<section id="products" class="products">
-    <h2>Our Collection</h2>
-
-    <div class="product-grid">
-
-        <!-- Product 1 -->
-        <div class="product-card">
-            <img src="images/Bird in Bag - 2pc Set Solid Color PU Handbag & Card Holder with Bowknot Pendant for Women - Daily Casual, Business, Commute, School, Shopping.jpeg" alt="Blue Women's Handbag">
-            <h3>Blue Women's Handbag</h3>
-            <p>Handbag + Card Holder</p>
-            <strong>ETB 4,500 – 5,000</strong>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Blue%20Women's%20Handbag." class="order-btn">ORDER NOW</a>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card">
-            <img src="images/353884483244160154 (1).jpeg" alt="Light Blue High-Top Sneakers">
-            <h3>Light Blue High-Top</h3>
-            <p>Sizes: 39 – 44</p>
-            <strong>ETB 4,000 – 4,500</strong>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Light%20Blue%20High-Top%20Sneakers." class="order-btn">ORDER NOW</a>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card">
-            <img src="images/15129348745193943.jpeg" alt="Brown Men's Loafers">
-            <h3>Brown Men's Loafers</h3>
-            <p>Classic Fashion Loafers</p>
-            <strong>ETB 2,000</strong>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Brown%20Men's%20Loafers." class="order-btn">ORDER NOW</a>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card">
-            <img src="images/1114289132828267035.jpeg" alt="Blue Luxury Watch">
-            <h3>Blue Luxury Watch</h3>
-            <p>Elegant Fashion Watch</p>
-            <strong>ETB 3,000</strong>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Blue%20Luxury%20Watch." class="order-btn">ORDER NOW</a>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="product-card">
-            <img src="images/Men's Shoes, New Basketball Shoes, Autumn And Winter Leather Sports Shoes, Breathable, Non Slip, And Shock-Absorbing Running Shoes For Teenagers.jpeg" alt="White Fashion Sneakers">
-            <h3>White Fashion Sneakers</h3>
-            <p>Sizes: 38 – 42</p>
-            <strong>ETB 4,500</strong>
-            <a href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20White%20Fashion%20Sneakers." class="order-btn">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-<style>
 .products {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.products h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-    max-width: 1100px;
-    margin: auto;
 }
 
-.product-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    background: #fff;
+.product {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.product-card img {
+.product img {
     width: 100%;
-    height: 260px;
+    height: 280px;
     object-fit: cover;
-}
-
-.product-card h3 {
-    margin: 15px 0 8px;
-}
-
-.product-card p {
-    color: #666;
-}
-
-.product-card strong {
     display: block;
-    margin: 12px 0;
-    font-size: 18px;
 }
 
-.order-btn {
+.product-info {
+    padding: 18px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.order {
     display: inline-block;
     background: #111;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-    margin-top: 5px;
 }
 
-.order-btn:hover {
-    background: #333;
+.about {
+    background: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact a {
+    color: #111;
+    font-weight: bold;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
 }
 </style>
-</body>
+</head>
 
+<body>
+
+<header>
+
+    <div class="logo">ARONICA</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <h1>Step Into Your Style</h1>
+
+    <p>
+        Discover stylish and quality shoes,
+        bags and accessories for everyone.
+    </p>
+
+    <a href="#collection" class="button">SHOP NOW</a>
+
+</section>
+
+
+<section class="products" id="collection">
+
+    <h2 class="section-title">Our Collection</h2>
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <img src="images/353884483244160154 (1).jpeg"
+                 alt="ARONICA Handbag">
+
+            <div class="product-info">
+
+                <h3>Elegant Handbag</h3>
+
+                <div class="price">
+                    4,500 - 5,000 ETB
+                </div>
+
+                <a class="order"
+                   href="tel:0967263998">
+                   Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <img src="images/15129348745193943.jpeg"
+                 alt="ARONICA Women's Shoes">
+
+            <div class="product-info">
+
+                <h3>Women's Fashion Shoes</h3>
+
+                <div class="price">
+                    4,000 - 4,500 ETB
+                </div>
+
+                <a class="order"
+                   href="tel:0967263998">
+                   Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <img src="images/1114289132828267035.jpeg"
+                 alt="ARONICA Men's Shoes">
+
+            <div class="product-info">
+
+                <h3>Men's Classic Shoes</h3>
+
+                <div class="price">
+                    2,000 ETB
+                </div>
+
+                <a class="order"
+                   href="tel:0967263998">
+                   Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+
+            <img src="images/1150177192336063611.jpeg"
+                 alt="ARONICA Watch">
+
+            <div class="product-info">
+
+                <h3>Luxury Watch</h3>
+
+                <div class="price">
+                    3,000 ETB
+                </div>
+
+                <a class="order"
+                   href="tel:0967263998">
+                   Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product">
+
+            <img src="images/319755642316663217.jpeg"
+                 alt="ARONICA Sneakers">
+
+            <div class="product-info">
+
+                <h3>Fashion Sneakers</h3>
+
+                <div class="price">
+                    4,500 ETB
+                </div>
+
+                <a class="order"
+                   href="tel:0967263998">
+                   Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About ARONICA</h2>
+
+    <p>
+        ARONICA is a fashion retail brand dedicated to
+        providing stylish and quality products at
+        affordable prices.
+    </p>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>
+        Ready to order?
+    </p>
+
+    <p style="margin-top:15px;">
+        📞 <a href="tel:0967263998">
+        0967 263 998
+        </a>
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 ARONICA. All Rights Reserved.</p>
+
+    <p style="margin-top:8px;">
+        Step Into Your Style.
+    </p>
+
+</footer>
+
+</body>
 </html>
