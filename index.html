@@ -1,393 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ARONICA | Step Into Your Style</title>
+    <title>ARONICA | Shoes, Bags & Watches</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #111;
-}
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #fff;
+            line-height: 1.6;
+        }
 
-header {
-    background: white;
-    text-align: center;
-    padding: 25px 15px;
-    border-bottom: 1px solid #ddd;
-}
+        /* HEADER */
+        header {
+            background: #111;
+            color: white;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.logo {
-    font-size: 38px;
-    font-weight: bold;
-    letter-spacing: 6px;
-    margin-bottom: 25px;
-}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-nav a {
-    text-decoration: none;
-    color: #111;
-    font-size: 18px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 15px;
+        }
 
-nav a:hover {
-    color: #777;
-}
+        nav a:hover {
+            color: #f0c040;
+        }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: white;
-}
+        /* HERO */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(
+                rgba(0,0,0,0.65),
+                rgba(0,0,0,0.65)
+            ),
+            url("images/sneaker.jpeg");
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
 
-.hero p {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 30px;
-}
+        .hero-content h1 {
+            font-size: 55px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
 
-.button {
-    display: inline-block;
-    background: #111;
-    color: white;
-    padding: 16px 35px;
-    text-decoration: none;
-    border-radius: 5px;
-}
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
 
-.products {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
+        .btn {
+            display: inline-block;
+            background: #f0c040;
+            color: #111;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.section-title {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 40px;
-}
+        .btn:hover {
+            background: white;
+        }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-}
+        /* SECTIONS */
+        section {
+            padding: 70px 5%;
+        }
 
-.product {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
 
-.product img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-}
+        .section-text {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
 
-.product-info {
-    padding: 18px;
-    text-align: center;
-}
+        /* PRODUCTS */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
 
-.product-info h3 {
-    margin-bottom: 10px;
-}
+        .product {
+            background: #f8f8f8;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
 
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
 
-.order {
-    display: inline-block;
-    background: #111;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
+        .product h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
 
-.about {
-    background: white;
-    text-align: center;
-    padding: 60px 20px;
-}
+        .product p {
+            margin: 8px 0;
+        }
 
-.about p {
-    max-width: 700px;
-    margin: 20px auto;
-    line-height: 1.7;
-    color: #555;
-}
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #b8860b;
+        }
 
-.contact {
-    text-align: center;
-    padding: 60px 20px;
-}
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
 
-.contact a {
-    color: #111;
-    font-weight: bold;
-}
+        /* INFO BOXES */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
-}
+        .info-box {
+            background: #f5f5f5;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
 
-@media (max-width: 600px) {
+        .info-box h3 {
+            margin-bottom: 15px;
+        }
 
-    .logo {
-        font-size: 30px;
-    }
+        /* CONTACT */
+        .contact {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
 
-    nav {
-        gap: 15px;
-    }
+        .contact a {
+            color: #f0c040;
+            text-decoration: none;
+        }
 
-    nav a {
-        font-size: 16px;
-    }
+        /* FOOTER */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-    .hero h1 {
-        font-size: 38px;
-    }
+        /* MOBILE */
+        @media (max-width: 900px) {
 
-    .hero {
-        padding: 70px 15px;
-    }
-}
-</style>
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .hero-content p {
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 
-    <div class="logo">ARONICA</div>
+    <div class="header-content">
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#collection">Collection</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <div class="logo">
+            ARONICA
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#shoes">Shoes</a>
+            <a href="#bags">Bags</a>
+            <a href="#watches">Watches</a>
+            <a href="#prices">Prices</a>
+            <a href="#sizes">Sizes</a>
+            <a href="#whatsapp">WhatsApp</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
 
 </header>
 
 
+<!-- HOME -->
 <section class="hero" id="home">
 
-    <h1>Step Into Your Style</h1>
+    <div class="hero-content">
 
-    <p>
-        Discover stylish and quality shoes,
-        bags and accessories for everyone.
-    </p>
+        <h1>ARONICA</h1>
 
-    <a href="#collection" class="button">SHOP NOW</a>
+        <p>
+            Step Into Your Style
+        </p>
 
-</section>
+        <p>
+            Quality Shoes, Bags & Watches
+        </p>
 
-
-<section class="products" id="collection">
-
-    <h2 class="section-title">Our Collection</h2>
-
-    <div class="product-grid">
-
-
-        <!-- PRODUCT 1 -->
-
-        <div class="product">
-
-            <img src="images/353884483244160154 (1).jpeg"
-                 alt="ARONICA Handbag">
-
-            <div class="product-info">
-
-                <h3>Elegant Handbag</h3>
-
-                <div class="price">
-                    4,500 - 5,000 ETB
-                </div>
-
-                   <a class="order"
-   href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Elegant%20Handbag."
-   target="_blank">
-   Order on WhatsApp
-</a>         </div>
-
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-
-        <div class="product">
-
-            <img src="images/15129348745193943.jpeg"
-                 alt="ARONICA Women's Shoes">
-
-            <div class="product-info">
-
-                <h3>Women's Fashion Shoes</h3>
-
-                <div class="price">
-                    4,000 - 4,500 ETB
-                </div>
-
-                   <a class="order"
-   href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Light%20Blue%20High-Top%20Sneakers."
-   target="_blank">
-   Order on WhatsApp
-</a>        </div>
-
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-
-        <div class="product">
-
-            <img src="images/1114289132828267035.jpeg"
-                 alt="ARONICA Men's Shoes">
-
-            <div class="product-info">
-
-                <h3>Men's Classic Shoes</h3>
-
-                <div class="price">
-                    2,000 ETB
-                </div>
-
-            <a class="order"
-   href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Brown%20Men's%20Loafers."
-   target="_blank">
-   Order on WhatsApp
-</a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-
-        <div class="product">
-
-            <img src="images/1150177192336063611.jpeg"
-                 alt="ARONICA Watch">
-
-            <div class="product-info">
-
-                <h3>Luxury Watch</h3>
-
-                <div class="price">
-                    3,000 ETB
-                </div>
-
-                  <a class="order"
-   href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20Blue%20Luxury%20Watch."
-   target="_blank">
-   Order on WhatsApp
-</a>         </div>
-
-        </div>
-
-
-        <!-- PRODUCT 5 -->
-
-        <div class="product">
-
-            <img src="images/319755642316663217.jpeg"
-                 alt="ARONICA Sneakers">
-
-            <div class="product-info">
-
-                <h3>Fashion Sneakers</h3>
-
-                <div class="price">
-                    4,500 ETB
-                </div>
-
-                   <a class="order"
-   href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20order%20the%20White%20Fashion%20Sneakers."
-   target="_blank">
-   Order on WhatsApp
-</a>      </div>
-
-        </div>
-
+        <a href="#collection" class="btn">
+            Explore Collection
+        </a>
 
     </div>
 
 </section>
 
 
-<section class="about" id="about">
+<!-- COLLECTION -->
+<section id="collection">
 
-    <h2 class="section-title">About ARONICA</h2>
+    <h2 class="section-title">
+        Our Collection
+    </h2>
 
-    <p>
-        ARONICA is a fashion retail brand dedicated to
-        providing stylish and quality products at
-        affordable prices.
+    <p class="section-text">
+
+        Welcome to ARONICA. Discover stylish and quality
+        shoes, bags and watches for your everyday lifestyle.
+
+        Choose your favorite product and order easily through WhatsApp.
+
     </p>
 
 </section>
 
 
-<section class="contact" id="contact">
+<!-- SHOES -->
+<section id="shoes">
 
-    <h2 class="section-title">Contact Us</h2>
+    <h2 class="section-title">
+        Shoes
+    </h2>
 
-    <p>
-        Ready to order?
+    <div class="products">
+
+        <!-- HIGH TOP -->
+        <div class="product">
+
+            <img src="images/hightop.jpeg" alt="High Top Shoes">
+
+            <h3>High Top Shoes</h3>
+
+            <p>Stylish high top shoes</p>
+
+            <p class="price">
+                Price: Contact Us
+            </p>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20High%20Top%20Shoes."
+                target="_blank">
+
+                Order on WhatsApp
+
+            </a>
+
+        </div>
+
+
+        <!-- LOAFERS -->
+        <div class="product">
+
+            <img src="images/loafers.jpeg" alt="Loafers">
+
+            <h3>Loafers</h3>
+
+            <p>Elegant casual loafers</p>
+
+            <p class="price">
+                Price: Contact Us
+            </p>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20Loafers."
+                target="_blank">
+
+                Order on WhatsApp
+
+            </a>
+
+        </div>
+
+
+        <!-- SNEAKERS -->
+        <div class="product">
+
+            <img src="images/sneaker.jpeg" alt="White Sneakers">
+
+            <h3>White Sneakers</h3>
+
+            <p>Modern comfortable sneakers</p>
+
+            <p class="price">
+                Price: Contact Us
+            </p>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20White%20Sneakers."
+                target="_blank">
+
+                Order on WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BAGS -->
+<section id="bags">
+
+    <h2 class="section-title">
+        Bags
+    </h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <img src="images/handbag.jpeg" alt="ARONICA Handbag">
+
+            <h3>ARONICA Handbag</h3>
+
+            <p>
+                Stylish handbag with card holder
+            </p>
+
+            <p class="price">
+                Price: Contact Us
+            </p>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20the%20Handbag."
+                target="_blank">
+
+                Order on WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WATCHES -->
+<section id="watches">
+
+    <h2 class="section-title">
+        Watches
+    </h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <img src="images/watch.jpeg" alt="ARONICA Watch">
+
+            <h3>ARONICA Watch</h3>
+
+            <p>
+                Stylish everyday watch
+            </p>
+
+            <p class="price">
+                Price: Contact Us
+            </p>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20am%20interested%20in%20the%20Watch."
+                target="_blank">
+
+                Order on WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRICES -->
+<section id="prices">
+
+    <h2 class="section-title">
+        Prices
+    </h2>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+
+            <h3>Affordable Prices</h3>
+
+            <p>
+                We offer competitive prices for
+                quality products.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>Product Prices</h3>
+
+            <p>
+                Contact us on WhatsApp for the
+                latest price and availability.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>Special Offers</h3>
+
+            <p>
+                Ask us about available discounts
+                and special offers.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SIZES -->
+<section id="sizes">
+
+    <h2 class="section-title">
+        Sizes
+    </h2>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+
+            <h3>Shoe Sizes</h3>
+
+            <p>
+                Available sizes depend on the
+                product and stock.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>Size Assistance</h3>
+
+            <p>
+                Contact us before ordering and
+                we will help you choose your size.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>Availability</h3>
+
+            <p>
+                Ask us on WhatsApp for the
+                available sizes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHATSAPP ORDERING -->
+<section id="whatsapp">
+
+    <h2 class="section-title">
+        WhatsApp Ordering
+    </h2>
+
+    <p class="section-text">
+
+        Ordering from ARONICA is easy.
+
+        Simply click the button below and
+        send us the product name and your
+        preferred size.
+
+        We will confirm the price and availability.
+
+        <br><br>
+
+        <a
+            class="whatsapp-btn"
+            href="https://wa.me/251967263998?text=Hello%20ARONICA,%20I%20want%20to%20place%20an%20order."
+            target="_blank">
+
+            Order Through WhatsApp
+
+        </a>
+
     </p>
 
-    <p style="margin-top:15px;">
-        📞 <a href="tel:0967263998">
-        0967 263 998
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact ARONICA
+    </h2>
+
+    <p>
+        📍 Holeta, Oromia, Ethiopia
+    </p>
+
+    <p>
+        📱 Phone:
+        <a href="tel:+251967263998">
+            0967263998
         </a>
     </p>
 
+    <p>
+        💬 WhatsApp:
+        <a
+            href="https://wa.me/251967263998"
+            target="_blank">
+
+            Chat with us
+
+        </a>
+    </p>
+
+    <br>
+
+    <p>
+        We are happy to help you choose
+        the right product.
+    </p>
+
 </section>
 
 
+<!-- FOOTER -->
 <footer>
 
-    <p>© 2026 ARONICA. All Rights Reserved.</p>
+    <p>
+        © 2026 ARONICA. All Rights Reserved.
+    </p>
 
-    <p style="margin-top:8px;">
-        Step Into Your Style.
+    <p>
+        Holeta, Oromia, Ethiopia
     </p>
 
 </footer>
